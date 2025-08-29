@@ -39,7 +39,7 @@ compras = []
 # Looping para gerar 2000 compras
 for _ in range(2000):
     loja = random.choice(LOJAS) # escolhe uma loja aleatória
-    vendedor = random.choice(loja("vendedores")) # escolhe um vendedor aleatório da loja
+    vendedor = random.choice(loja["vendedores"]) # escolhe um vendedor aleatório da loja
     produto = random.choice(PRODUTOS) # escolhe um produto aleatório
     hora_compra = datetime.now() - timedelta(
         days=random.randint(1, 365), # variação de até 365 dias
