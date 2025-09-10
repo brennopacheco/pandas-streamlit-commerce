@@ -20,7 +20,7 @@ valor_filtro = col_2.selectbox('Selecione o Valor', list(df_compras[coluna_filtr
 st_filtrar = col_1.button('Filtrar')
 st_limpar = col_2.button('Limpar Filtros')
 
-if col_1:
+if st_filtrar:
     st.dataframe(df_compras.loc[df_compras[coluna_filtrada] == valor_filtro, colunas_selecionadas])
 elif st_limpar:
     st.dataframe(df_compras[colunas_selecionadas])
