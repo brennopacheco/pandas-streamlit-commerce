@@ -56,7 +56,7 @@ for _ in range(4000):
     produto = random.choice(PRODUTOS) # escolhe um produto aleatório
     hora_compra = datetime.now() - timedelta(
         days=random.randint(1, 365), # variação de até 365 dias
-        hours=random.randint(-6, 6), # variação de até 6 horas
+        hours=random.randint(-5, 5), # variação de até 5 horas
         minutes=random.randint(-30, 30) # variação de até 30 minutos
     )
     genero_cliente = random.choice(GENERO_CLIENTES) # escolhe um gênero aleatório
@@ -82,7 +82,7 @@ df_lojas = pd.DataFrame(LOJAS)
 df_produtos = pd.DataFrame(PRODUTOS)
 
 # Exportar os datasets para arquivos CSV
-df_compras.to_csv(pasta_datasets / 'compras.csv', decimal=',', sep=';')
+df_compras.to_csv(pasta_datasets / 'compras.csv', decimal=',', sep=';', date_format='%Y-%m-%d %H:%M:%S')  # <-- garante padrão sem microssegundos
 df_lojas.to_csv(pasta_datasets / 'lojas.csv', decimal=',', sep=';')
 df_produtos.to_csv(pasta_datasets / 'produtos.csv', decimal=',', sep=';')
 
