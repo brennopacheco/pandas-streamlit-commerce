@@ -74,5 +74,5 @@ valor_comissao_vendedor = f'R$ {valor_comissao_vendedor:.2f}'
 
 col31, col32 = st.columns(2)
 
-col31.metric('Valor de compras no período', valor_comissao_vendedor)
+col31.metric('Valor de compras no período', valor_compras_vendedor)
 col32.metric('Comissão no Período', valor_comissao_vendedor)
